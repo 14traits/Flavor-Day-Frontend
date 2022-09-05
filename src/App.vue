@@ -38,17 +38,17 @@ export default {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li><a class="nav-link" href="/.">Locations</a></li>
+          <!-- <li><a class="nav-link" href="/.">Locations</a></li> -->
           <!-- <li><a class="nav-link" href="/movies/new">New Movies</a></li> -->
           <!-- <li><a class="nav-link" href="/movies/new">Edit Movies</a></li>
           <li><a v-if="!isLoggedIn" class="nav-link" href="/signup">Sign Up</a></li>
           <li><a v-if="!isLoggedIn" class="nav-link" href="/login">Sign In</a></li>
           <li><a v-if="isLoggedIn" class="nav-link" href="/logout">Sign Out</a></li> -->
         </ul>
-        <form class="d-flex" role="search">
+        <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-success" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
@@ -66,9 +66,9 @@ export default {
     |
     <router-link to="/logout">Log Out</router-link>
   </nav> -->
-  <div v-if="this.flashMessage" class="alert alert-success">
+  <!-- <div v-if="this.flashMessage" class="alert alert-success">
     {{ flashMessage }}
-  </div>
+  </div> -->
   <router-view />
 </template>
 
