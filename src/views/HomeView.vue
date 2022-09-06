@@ -4,7 +4,8 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "I'm sorry, Culver's. I must not tell lies. If only your API followed the same rules...",
+      message: "I'm sorry, Culver's. I must not tell lies.",
+      message2: "If only your API followed the same rules...",
       locations: [],
       flavor: [],
       mapping: [],
@@ -32,16 +33,14 @@ export default {
           map.setFog({}); // Set the default atmosphere style
         });
         this.locations.forEach((locations) => {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setText(locations.title);
+          const popup = new mapboxgl.Popup({ offset: 25 }).setText(locations.title + "\n" + locations.flavor[0].name);
           const el = document.createElement("div");
           el.className = "marker";
           el.style.backgroundImage = "url(" + locations.flavor[0].image_url + ")";
           el.style.width = "50px";
           el.style.height = "50px";
           el.style.backgroundSize = "100%";
-          // new mapboxgl.Marker().setLngLat([locations.longitude, locations.latitude]).setPopup(popup).addTo(map);
           new mapboxgl.Marker(el).setLngLat([locations.longitude, locations.latitude]).setPopup(popup).addTo(map);
-          // console.log(marker1);
         });
       });
   },
@@ -60,6 +59,7 @@ export default {
   <div class="home">
     <!-- <p>{{ locations }}</p> -->
     <h1>{{ message }}</h1>
+    <h3>{{ message2 }}</h3>
     <!-- <TransitionGroup name="list"> -->
     <div class="map-border">
       <div id="map"></div>
