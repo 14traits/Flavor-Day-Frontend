@@ -24,7 +24,17 @@ export default {
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">FlavorDay</a>
+      <a class="navbar-brand" href="/">
+        <img
+          src="./assets/image-from-rawpixel-id-1234666-original.png"
+          alt="FlavorDay Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        FlavorDay
+      </a>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -70,6 +80,36 @@ export default {
     {{ flashMessage }}
   </div> -->
   <router-view />
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">Code and Site Design ©2022 John Rogers.</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <span class="mb-3 mb-md-0 text-muted">Culver's Brand and Images ©Culver's</span>
+      <li class="ms-3">
+        <a class="text-muted" href="#">
+          <svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-muted" href="#">
+          <font-awesome-icon icon="fa-brands fa-square-twitter" />
+          <svg class="bi" width="24" height="24">
+            <use xlink:href="#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-muted" href="#">
+          <svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
 </template>
 
 <style>
@@ -78,23 +118,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* background-image: url("https://images.unsplash.com/photo-1657960526734-108dcd75a24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80"); */
 }
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-nav {
-  padding: 30px;
-}
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>
