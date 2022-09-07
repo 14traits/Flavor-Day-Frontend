@@ -97,7 +97,7 @@ export default {
       </li>
       <li class="ms-3">
         <a class="text-muted" href="#">
-          <font-awesome-icon icon="fa-brands fa-square-twitter" />
+          <!-- <font-awesome-icon icon="fa-brands fa-square-twitter" /> -->
           <svg class="bi" width="24" height="24">
             <use xlink:href="#instagram"></use>
           </svg>

@@ -33,14 +33,19 @@ export default {
           map.setFog({}); // Set the default atmosphere style
         });
         this.locations.forEach((locations) => {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setText(locations.title + "\n" + locations.flavor[0].name);
-          const el = document.createElement("div");
-          el.className = "marker";
-          el.style.backgroundImage = "url(" + locations.flavor[0].image_url + ")";
-          el.style.width = "50px";
-          el.style.height = "50px";
-          el.style.backgroundSize = "100%";
-          new mapboxgl.Marker(el).setLngLat([locations.longitude, locations.latitude]).setPopup(popup).addTo(map);
+          console.log(locations.flavor);
+          if (locations.flavor[0] === undefined) {
+            console.log("no flavor data");
+          } else {
+            const popup = new mapboxgl.Popup({ offset: 25 }).setText(locations.title + "\n" + locations.flavor[0].name);
+            const el = document.createElement("div");
+            el.className = "marker";
+            el.style.backgroundImage = "url(" + locations.flavor[0].image_url + ")";
+            el.style.width = "50px";
+            el.style.height = "50px";
+            el.style.backgroundSize = "100%";
+            new mapboxgl.Marker(el).setLngLat([locations.longitude, locations.latitude]).setPopup(popup).addTo(map);
+          }
         });
       });
   },
