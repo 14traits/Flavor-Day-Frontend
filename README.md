@@ -10,6 +10,8 @@ It is currently a VueJS app running a simple single page app with a MapBox custo
 
 *If culvers ever fixes this api with solid data, that is verifiable working I will update and publish an actual app to a live site vs the planned I will spin the project to show it off only.*
 
+CICD Pipeline triggers on pull requests.
+
 ## Project setup
 ```
 npm install
