@@ -4,8 +4,8 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "I'm sorry, Culver's. I must not tell lies.",
-      message2: "If only your API followed the same rules...",
+      message: "Ever wonder where your favorite Culvers Flavor of the day was being served.",
+      message2: "Well I did, and I don't need much of an excuse for a road trip...",
       locations: [],
       flavor: [],
       mapping: [],
