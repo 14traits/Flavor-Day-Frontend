@@ -7,8 +7,8 @@ RUN apk update && apk upgrade --available && sync
 RUN ls -l
 RUN npm install
 COPY . .
-EXPOSE 8080
 RUN npm run build
+
 
 # produciton stage
 #FROM nginx:stable-alpine as production-stage
