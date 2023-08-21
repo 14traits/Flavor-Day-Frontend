@@ -1,6 +1,6 @@
 # build stage
 FROM node:17 as build-stage
-WORKDIR ./
+WORKDIR /src
 COPY package*.json ./
 #RUN apk update && apk upgrade --available && sync
 #RUN ls -l
@@ -11,7 +11,7 @@ RUN npm run build
 
 # production stage
 FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage ./dist /usr/share/nginx/html
+COPY --from=build-stage /dist /usr/share/nginx/html
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
 
