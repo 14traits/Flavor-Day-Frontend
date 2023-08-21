@@ -1,6 +1,6 @@
 # build stage
 FROM node:lts-alpine as build-stage
-WORKDIR ./FRONT_END/src
+WORKDIR ./src
 COPY package*.json ./
 RUN npm install
 COPY . .
