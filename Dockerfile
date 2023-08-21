@@ -8,7 +8,7 @@ RUN ls -l
 RUN npm install
 COPY . .
 RUN npm run build
-
+CMD ["npm", "run", "serve"]
 
 # produciton stage
 #FROM nginx:stable-alpine as production-stage

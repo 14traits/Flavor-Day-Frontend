@@ -1,5 +1,5 @@
 .git
-.Dockerignore
+.dockerignore
 .env
 README.md
 .gitignore
