@@ -5,7 +5,7 @@ WORKDIR /src
 COPY /package.json ./
 RUN apk update && apk upgrade --available && sync
 RUN ls -l
-RUN npm ci --omit=dev
+RUN npm install
 COPY . .
 EXPOSE 8080
 RUN npm run build
