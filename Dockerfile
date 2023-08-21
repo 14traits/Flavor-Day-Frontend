@@ -1,5 +1,5 @@
 # build stage
-FROM node:14 as build-stage
+FROM node:latest as build-stage
 WORKDIR ./
 COPY package*.json ./
 #RUN apk update && apk upgrade --available && sync
