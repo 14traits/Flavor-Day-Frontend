@@ -1,13 +1,13 @@
 # build stage
 FROM node:lts-alpine as build-stage
-WORKDIR /src
+WORKDIR ./
 COPY package*.json ./
 #RUN apk update && apk upgrade --available && sync
 #RUN ls -l
 RUN npm install
 COPY . .
 RUN npm run build
-COPY ./dist .
+
 
 # production stage
 FROM nginx:stable-alpine as production-stage
