@@ -2,8 +2,8 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /src
 COPY package*.json ./
-RUN apk update && apk upgrade --available && sync
-RUN ls -l
+#RUN apk update && apk upgrade --available && sync
+#RUN ls -l
 RUN npm install
 COPY . .
 RUN npm run build
