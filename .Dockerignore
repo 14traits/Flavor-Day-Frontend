@@ -1,7 +1,9 @@
 .git
-.dockerignore
+.Dockerignore
 .env
 README.md
 .gitignore
 .gitattributes
 .http
+.github
+.gitignore
