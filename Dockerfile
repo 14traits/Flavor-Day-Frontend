@@ -1,6 +1,6 @@
 # build stage
 FROM node:17 as build-stage
-WORKDIR /FRONT_END
+WORKDIR /usr/src/app
 COPY package*.json ./
 #RUN apk update && apk upgrade --available && sync
 #RUN ls -l
