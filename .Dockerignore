@@ -1,6 +1,8 @@
 .git
 .dockerignore
 .env
+.env.development
+.env.production
 .gitattributes
 .http
 .gitignore
